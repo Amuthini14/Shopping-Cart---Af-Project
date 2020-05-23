@@ -26,7 +26,9 @@ const Review = () => {
           </Button>
         </Form.Item>
       </Form>
+      <Divider/>
       </div>
+     
     );
   };
 

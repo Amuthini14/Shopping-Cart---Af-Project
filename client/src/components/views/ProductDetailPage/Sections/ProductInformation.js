@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Descriptions } from 'antd';
 import Review from '../../Reviews/Review';
+import ReviewList from '../../Reviews/ReviewList';
 
 function ProductInformation(props) {
 
@@ -49,8 +50,10 @@ function ProductInformation(props) {
                     </Button>
             </div>
             </div>
-
+          
+        
             <Review/>
+            <ReviewList/>
            
         </div>
     )
