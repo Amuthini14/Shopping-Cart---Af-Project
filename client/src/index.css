@@ -66,9 +66,3 @@ tr:nth-child(even) {
 input[type="radio"]{
   display:none;
 }
-
-/*.....................Review form..................*/
-
-.review-form{
-  margin-top: 40px;
-}
