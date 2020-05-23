@@ -11,7 +11,6 @@ import ProductDetailPage from './views/ProductDetailPage/ProductDetailPage';
 import ShoppingCartPage from './views/ShoppingCartPage/ShoppingCartPage';
 import AdminPage from './views/AdminPage/AdminPage';
 import StoreManagerPage from './views/StoreManagerPage/StoreManagerPage';
-import ReviewForm from './views/ProductRating/ReviewForm';
 
 function App() {
 
@@ -28,7 +27,6 @@ function App() {
           <Route exact path="/" component={Auth(HomePage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(UserRegisterationPage, false)} />
-          <Route exact path="/reviewform" component={Auth(ReviewForm, true)} />
         </Switch>
       </div>
     

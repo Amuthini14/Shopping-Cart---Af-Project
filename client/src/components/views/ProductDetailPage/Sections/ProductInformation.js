@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Descriptions } from 'antd';
+import Review from '../../Reviews/Review';
 
 function ProductInformation(props) {
 
@@ -14,7 +15,6 @@ function ProductInformation(props) {
     }
 
     const addToWishlsit = () => {
-        // props.addToCart(props.detail._id)
         console.log("Added to wishlist");
     }
 
@@ -49,6 +49,8 @@ function ProductInformation(props) {
                     </Button>
             </div>
             </div>
+
+            <Review/>
            
         </div>
     )
