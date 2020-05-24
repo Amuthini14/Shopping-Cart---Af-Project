@@ -20,7 +20,8 @@ app.use(cookieParser());
 
 app.use('/api/users', require('./routes/users'));
 app.use('/api/product', require('./routes/product'));
-
+app.use('/api/review', require('./routes/review'));
+app.use('/api/wishlist', require('./routes/wishlist'));
 app.use('/uploads', express.static('uploads'));
 
 // Serve static assets if in production
