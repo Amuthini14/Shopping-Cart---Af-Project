@@ -11,6 +11,7 @@ import ProductDetailPage from './views/ProductDetailPage/ProductDetailPage';
 import ShoppingCartPage from './views/ShoppingCartPage/ShoppingCartPage';
 import AdminPage from './views/AdminPage/AdminPage';
 import StoreManagerPage from './views/StoreManagerPage/StoreManagerPage';
+import Wishlist from './views/Wishlist/Wishlist';
 
 function App() {
 
@@ -21,12 +22,14 @@ function App() {
         <Switch>
         <Route exact path="/product/upload" component={Auth(ProductUploadPage, true)} />
           <Route exact path="/product/:productId" component={Auth(ProductDetailPage, null)} />
+          <Route exact path="/wishlist" component={Auth(Wishlist, false)} />
           <Route exact path="/user/cart" component={Auth(ShoppingCartPage, true)} />
           <Route exact path="/admin" component={Auth(AdminPage, null)} />
           <Route exact path="/StoreManager" component={Auth(StoreManagerPage, null)} />
           <Route exact path="/" component={Auth(HomePage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(UserRegisterationPage, false)} />
+          
         </Switch>
       </div>
     

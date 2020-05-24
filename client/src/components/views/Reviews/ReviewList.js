@@ -3,26 +3,33 @@ import Review from './Review';
 import { Divider } from 'antd';
 
 class ReviewList extends Component  {
-    reviews=[
-        {
-            name:"A.Samarasinghe",
-            comment:"Excellent",
-            rating:5,
-            date:"2020-05-06"
-        },
-        {
-            name:"Nethu Perera",
-            comment:"Quality material has been used. Reasonable for the price",
-            rating:4,
-            date:"2020-05-06"
+    constructor(props){
+        super(props);
+
+        this.state={
+            reviews:[],
+            isLoaded:false
         }
-    ];
+    }
+    componentWillMount(){
+        fetch('http://localhost:5000/display-review')
+        .then(res => res.json())
+        .then(json => {
+          this.setState({
+            isLoaded: true,
+            reviews: json,
+          })
+          console.log(this.state.reviews);
+        });
+
+    }
     render(){
+        var { reviews, isLoaded } = this.state;
         return (
             <div>
                 <h3><b>Comments</b></h3>
                 {
-                    this.reviews.map(review => {
+                    reviews.map(review => {
                         return (
                             <div>
                                 <b>{review.name}</b><br/>
