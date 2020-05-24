@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Review from './Review';
 import { Divider } from 'antd';
+import axios from 'axios';
 
 class ReviewList extends Component  {
     constructor(props){
@@ -11,7 +12,7 @@ class ReviewList extends Component  {
             isLoaded:false
         }
     }
-    componentWillMount(){
+    componentDidMount(){
         fetch('http://localhost:5000/display-review')
         .then(res => res.json())
         .then(json => {
