@@ -24,6 +24,11 @@ app.use('/api/review', require('./routes/review'));
 app.use('/api/wishlist', require('./routes/wishlist'));
 app.use('/uploads', express.static('uploads'));
 
+app.use('/employee', require('./Employee/employeeRoute'));
+app.use('/category', require('./Category/categoryRoute'));
+app.use('/storeManager', require('./StoreManager/storeManagerRoute'));
+app.use('/admin',require('./Admin/AdminRoutes/adminRoutes'));
+
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
 
