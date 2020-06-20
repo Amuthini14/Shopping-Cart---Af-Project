@@ -12,6 +12,20 @@ import ShoppingCartPage from './views/ShoppingCartPage/ShoppingCartPage';
 import AdminPage from './views/AdminPage/AdminPage';
 import StoreManagerPage from './views/StoreManagerPage/StoreManagerPage';
 import Wishlist from './views/Wishlist/Wishlist';
+import ViewEmployee from './views/AdminManagement/ViewEmployee';
+
+import AddEmployee from './views/AdminManagement/AddEmployee';
+import EditEmployee from "./views/AdminManagement/EditEmployee";
+import DeleteEmployee from "./views/AdminManagement/DeleteEmployee";
+import AddCategory from "./views/AdminManagement/CategoryManagement/AddCategory";
+import ViewCategory from "./views/AdminManagement/CategoryManagement/ViewCategory";
+import EditCategory from "./views/AdminManagement/CategoryManagement/EditCategory";
+import DeleteCategory from "./views/AdminManagement/CategoryManagement/DeleteCategory";
+import AddStoreManager from "./views/AdminManagement/StoreManagerManagement/AddStroeManager";
+import ViewStoreManager from "./views/AdminManagement/StoreManagerManagement/ViewStoreManager";
+import AddManager from './views/AdminManagement/StoreManagerManagement/addStoreManager';
+import EditStoreManager from "./views/AdminManagement/StoreManagerManagement/EditStoreManager";
+import DeleteStoreManager from "./views/AdminManagement/StoreManagerManagement/DeleteStoreManager";
 
 function App() {
 
@@ -29,6 +43,19 @@ function App() {
           <Route exact path="/" component={Auth(HomePage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(UserRegisterationPage, false)} />
+              <Route path="/viewEmployee"  component={ViewEmployee}  />
+          <Route path="/addEmployee" component={AddEmployee}  />
+        <Route path="/editEmployee/:id" component={EditEmployee}  />
+          <Route path="/deleteEmployee/:id" component={DeleteEmployee}  />
+          <Route path="/addCategory" component={AddCategory} />
+          <Route path="/viewCategory" component={ViewCategory} />
+          <Route path="/editCategory/:id" component={EditCategory} />
+          <Route path="/deleteCategory/:id" component={DeleteCategory} />
+          <Route path="/addSManager" component={AddStoreManager}  />
+          <Route path="/addManager/:id" component={AddManager}  />
+          <Route path="/viewSManager" component={ViewStoreManager}  />
+          <Route path="/editSManager/:id" component={EditStoreManager}  />
+          <Route path="/deleteSManager/:id" component={DeleteStoreManager}  />
           
         </Switch>
       </div>
